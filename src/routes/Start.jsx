@@ -1,14 +1,14 @@
-import React from 'react';
-import "../styles/start.css"
+// import React from 'react';
+// import "../styles/start.css"
 
-function Start () {
+// function Start () {
 
-    return(
-        <>
-        <section className="background-image-container">
+//     return(
+//         <>
+//         <section className="background-image-container">
 
-        <h2>Startsida</h2>
-        </section>
-        </>
-    )
-}; export default Start; 
+//         <h2>Som inloggad</h2>
+//         </section>
+//         </>
+//     )
+// }; export default Start; 

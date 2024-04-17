@@ -1,5 +1,6 @@
 import "../styles/header.css";
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const [isOpenMenuOverlay, setIsOpenMenuOverlay] = useState(false);
@@ -28,12 +29,20 @@ function Header() {
   return (
     <>
       <section className="header">
-        <div className="header__container"></div>
+        <NavLink className="header__container header__container--navbar">
+          Start
+        </NavLink>
         <div className="header__container">
-          <div className="header__container--navbar">Skogsslingor</div>
-          <div className="header__container--navbar">Kontakt</div>
-          <div className="header__container--navbar">Organisation</div>
-          {/* <div className="header__container--navbar"></div> */}
+      
+
+        <NavLink to="/kontakt" className="header__container--navbar">
+            Kontakt
+          </NavLink>
+          <NavLink to="/organisation" className="header__container--navbar">Organisation</NavLink>
+       
+          <div className=" header__container--navbar material-symbols-outlined person">
+person
+</div>
         </div>
         <span className="material-symbols-outlined person">person</span>
         <span className="material-symbols-outlined menu" onClick={toggleMenu}>
@@ -43,9 +52,8 @@ function Header() {
       {isOpenMenuOverlay && windowWidth <= 701 && (
         <div className="menu-overlay">
           <div className="menu-overlay__content">
-            <div className="menu-item">Skogsslingor</div>
-            <div className="menu-item">Kontakt</div>
-            <div className="menu-item">Organisation</div>
+            <NavLink  to="/kontakt" className="menu-item">Kontakt</NavLink>
+            <NavLink to="/organisation" className="menu-item">Organisation</NavLink>
           </div>
         </div>
       )}
