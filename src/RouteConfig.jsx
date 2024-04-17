@@ -3,7 +3,11 @@ import { createHashRouter } from "react-router-dom";
 
 // Root
 import { Root } from "./routes/Root.jsx";
-import Start from "./routes/Start";
+
+// Routes
+import Start from "./routes/Start.jsx";
+import Kontakt from "./routes/Kontakt.jsx";
+import Organisation from "./routes/Organisation.jsx";
 
 
 export const Router = createHashRouter([
@@ -16,6 +20,14 @@ export const Router = createHashRouter([
         path: "/start",
         element: <Start/>,
       },
+      {
+        path: "/kontakt",
+        element:<Kontakt/>,
+      },
+      {
+        path: "/organisation",
+        element:<Organisation/>,
+      }
     ],
   },
 ]);

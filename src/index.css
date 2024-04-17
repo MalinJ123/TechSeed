@@ -1,7 +1,14 @@
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-  }
-  
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 
+:root {
+  /* fonts */
+  --font-jura: "Jura", sans-serif;
+
+  /* colors */
+
+  /* font-family: var(--font-jura) */
+}
