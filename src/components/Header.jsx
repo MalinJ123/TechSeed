@@ -40,11 +40,11 @@ function Header() {
           </NavLink>
           <NavLink to="/organisation" className="header__container--navbar">Organisation</NavLink>
        
-          <div className=" header__container--navbar material-symbols-outlined person">
+          <NavLink to="/login" className=" header__container--navbar material-symbols-outlined person">
 person
-</div>
+</NavLink>
         </div>
-        <span className="material-symbols-outlined person">person</span>
+       
         <span className="material-symbols-outlined menu" onClick={toggleMenu}>
           Menu
         </span>

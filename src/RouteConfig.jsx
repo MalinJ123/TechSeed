@@ -8,6 +8,7 @@ import { Root } from "./routes/Root.jsx";
 import Start from "./routes/Start.jsx";
 import Kontakt from "./routes/Kontakt.jsx";
 import Organisation from "./routes/Organisation.jsx";
+import Login from "./routes/Login.jsx";
 
 
 export const Router = createHashRouter([
@@ -27,6 +28,10 @@ export const Router = createHashRouter([
       {
         path: "/organisation",
         element:<Organisation/>,
+      },
+      {
+        path: "/login",
+        element:<Login/>,
       }
     ],
   },
