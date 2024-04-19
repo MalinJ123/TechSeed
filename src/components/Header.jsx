@@ -29,7 +29,7 @@ function Header() {
   return (
     <>
       <section className="header">
-        <NavLink className="header__container header__container--navbar">
+        <NavLink to="/start" className="header__container header__container--navbar">
           Start
         </NavLink>
         <div className="header__container">
