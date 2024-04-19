@@ -7,6 +7,15 @@ function Login() {
   const [userPassword, setUserPassword] = useState("");
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+
+  // useEffect(() => {
+  //   setChangeButtonsOnView("authentication");
+
+  //   if(isUserLoggedIn) {
+  //     navigate("/start");
+  //   }
+  // }, [isUserLoggedIn])
+
  const navigate = useNavigate();
 
     // Hårdkodat användarnamn och lösenord
@@ -61,10 +70,16 @@ function Login() {
 }
 };
 
+const handleClose = () => {
+  navigate("/");
+};
 
   return (
     <section className="login__container">
       <form className="loginform" onSubmit={onHandleSubmit}>
+      <span className="material-symbols-outlined cross" onClick={handleClose}>
+close
+</span>
         <h1 className="login__container--title">Logga in</h1>
 
         <div className={`login__container--form ${usernameError ? "error" : ""}`}>
@@ -75,6 +90,7 @@ function Login() {
             id="username__input"
             placeholder="Joe Doe"
             maxLength={24}
+            autoComplete="current-username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
@@ -87,6 +103,7 @@ function Login() {
             className="label"
             type="password"
             id="password__input"
+            autoComplete="current-password"
             placeholder="****"
             maxLength={32}
             value={userPassword}
