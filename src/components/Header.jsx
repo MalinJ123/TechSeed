@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
   const [isOpenMenuOverlay, setIsOpenMenuOverlay] = useState(false);
+  const[ isPersonIconOpen, setIsPersonIconOpen] = useState("")
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   //   ser till att menuOverlayen inte är öppen när skärmen är över 701px
@@ -26,10 +27,18 @@ function Header() {
     setIsOpenMenuOverlay(!isOpenMenuOverlay);
   };
 
+  // Navigerar till och från "/" från person ikonen i navbaren
+  const handlePersonIconClick = () => {
+    if (!isPersonIconOpen) {
+      setIsPersonIconOpen(true);
+    } else {
+      setIsPersonIconOpen(false);
+    }
+  };
   return (
     <>
       <section className="header">
-        <NavLink className="header__container header__container--navbar">
+        <NavLink to="/start" className="header__container header__container--navbar">
           Start
         </NavLink>
         <div className="header__container">
@@ -40,14 +49,28 @@ function Header() {
           </NavLink>
           <NavLink to="/organisation" className="header__container--navbar">Organisation</NavLink>
        
-          <div className=" header__container--navbar material-symbols-outlined person">
-person
-</div>
+          <NavLink
+            to={isPersonIconOpen ? "/" : "/login"}
+            className="header__container--navbar material-symbols-outlined person"
+            onClick={handlePersonIconClick}
+          >
+            person
+          </NavLink>
         </div>
-        <span className="material-symbols-outlined person">person</span>
+
+
+        {/* Mobilikoner */}
+        <NavLink
+            to={isPersonIconOpen ? "/" : "/login"}
+            className="material-symbols-outlined mobilperson"
+            onClick={handlePersonIconClick}
+          >
+            person
+          </NavLink>
         <span className="material-symbols-outlined menu" onClick={toggleMenu}>
           Menu
         </span>
+      
       </section>
       {isOpenMenuOverlay && windowWidth <= 701 && (
         <div className="menu-overlay">

@@ -5,7 +5,7 @@ function Start () {
 
     return(
         <>
-        <section className="background-image-container">
+        <section >
 
         <h2>Som inloggad</h2>
         </section>
