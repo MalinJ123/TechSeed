@@ -7,7 +7,7 @@ function Start () {
         <>
         <section >
 
-        <h2>Som inloggad</h2>
+        <h2 className="white">Som inloggad så småning om </h2>
         </section>
         </>
     )
