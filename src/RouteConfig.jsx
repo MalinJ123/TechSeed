@@ -10,6 +10,7 @@ import Kontakt from "./routes/Kontakt.jsx";
 import Login from "./routes/Login.jsx";
 import Project from "./routes/Project.jsx";
 import Cooperation from "./routes/Cooperation.jsx";
+import FindOutMore from "./routes/FindOutMore.jsx"
 
 
 export const Router = createHashRouter([
@@ -37,6 +38,10 @@ export const Router = createHashRouter([
       {
         path: "/samarbetspartners",
         element:<Cooperation/>,
+      },
+      {
+        path: "/vill-du-veta-mer",
+        element:<FindOutMore/>,
       }
     ],
   },
