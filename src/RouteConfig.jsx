@@ -9,6 +9,7 @@ import Start from "./routes/Start.jsx";
 import Kontakt from "./routes/Kontakt.jsx";
 import Login from "./routes/Login.jsx";
 import Project from "./routes/Project.jsx";
+import Cooperation from "./routes/Cooperation.jsx";
 
 
 export const Router = createHashRouter([
@@ -32,6 +33,10 @@ export const Router = createHashRouter([
       {
         path: "/login",
         element:<Login/>,
+      },
+      {
+        path: "/samarbetspartners",
+        element:<Cooperation/>,
       }
     ],
   },
