@@ -1,35 +1,22 @@
-import "../styles/header.css";
+import * as MUI from '@mui/material/';
+import * as MUIIcons from '@mui/icons-material';
 import { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
-import hillringsberg from "../images/hillringsberg.png";
+import { useNavigate } from "react-router-dom";
 
-function Header() {
+import "../styles/header.css";
+import hillringsberg from "../images/main/logotype.png";
+
+export default function Header() {
+  const navigate = useNavigate();
+
   const [isOpenMenuOverlay, setIsOpenMenuOverlay] = useState(false);
   const [isPersonIconOpen, setIsPersonIconOpen] = useState("");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 
-  
-  const [showDropdownMenu, setShowDropdownMenu] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const dropdownmenu = () => {
-    setShowDropdownMenu(!showDropdownMenu);
-  };
-
-  // Stäng dropdownmenyn när användaren klickar utanför
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdownMenu(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [dropdownRef]);
+  // Dropdown
+  const [headerDropdown, setHeaderDropdown] = useState(false);
+  const [dropdownAnchorEl, setDropdownAnchorEl] = useState(null);
 
   //   ser till att menuOverlayen inte är öppen när skärmen är över 701px
   useEffect(() => {
@@ -64,40 +51,34 @@ function Header() {
   return (
     <>
       <section className="header">
-        <NavLink to="/start">
+        <MUI.Link to="/start">
           <img
             className="header__container--loggo"
             src={hillringsberg}
             alt="Hillringsbergslogga"
           />
-        </NavLink>
+        </MUI.Link>
         <div className="header__container" >
-          <div
-            className="header__container--navbar"
-            onClick={dropdownmenu}
-         
-          >
+          <MUI.Button id="header__dropdown-button" aria-controls={headerDropdown ? 'header__dropdown-menu' : undefined} aria-expanded={headerDropdown ? 'true' : undefined} variant="outlined" type="button" aria-haspopup="true" onClick={(event) => {setHeaderDropdown(!headerDropdown); setDropdownAnchorEl(event.currentTarget)}} disableElevation endIcon={headerDropdown ? <MUIIcons.KeyboardArrowUp /> : <MUIIcons.KeyboardArrowDown />} sx={{backgroundColor: 'transparent', color: '#fff', border: '1px solid transparent'}}>
             Om Eljusspåret
-          </div>
-          {showDropdownMenu && (
-            <div ref={dropdownRef} className="dropdown-content">
-              <NavLink to="/projektet-naturkraft">Projektet Naturkraft</NavLink>
-              <NavLink to="/samarbetspartners">Samarbetspartners</NavLink>
-              <NavLink to="/vill-du-veta-mer">Vill du veta mer?</NavLink>
-            </div>
-          )}
+          </MUI.Button>
+            <MUI.Menu id="header__dropdown-menu" MenuListProps={{'aria-labelledby': 'header__dropdown-button'}} open={headerDropdown} onClose={() => setHeaderDropdown(false)} anchorEl={dropdownAnchorEl}>
+              <MUI.MenuItem disableRipple onClick={() => navigate("/projektet-naturkraft")}>Projektet Naturkraft</MUI.MenuItem>
+              <MUI.MenuItem disableRipple onClick={() => navigate("/samarbetspartners")}>Samarbetspartners</MUI.MenuItem>
+              <MUI.MenuItem disableRipple onClick={() => navigate("/vill-du-veta-mer")}>Vill du veta mer?</MUI.MenuItem>
+            </MUI.Menu>
 
-          <NavLink to="/kontakt" className="header__container--navbar">
+          <MUI.Link to="/kontakt" className="header__container--navbar">
             Hitta hit
-          </NavLink>
+          </MUI.Link>
 
-          <NavLink
+          <MUI.Link
             to={isPersonIconOpen ? "/" : "/login"}
             className="header__container--navbar material-symbols-outlined person"
             onClick={handlePersonIconClick}
           >
             person
-          </NavLink>
+          </MUI.Link>
         </div>
 
         {/* Mobilikoner */}
@@ -110,16 +91,13 @@ function Header() {
           <div className="menu-overlay__content">
           
 
-            <NavLink className="menu-item" to="/projektet-naturkraft">Projektet Naturkraft</NavLink>
-              <NavLink className="menu-item" to="/samarbetspartners">Samarbetspartners</NavLink>
-              <NavLink className="menu-item" to="/vill-du-veta-mer">Vill du veta mer?</NavLink>
-
-              <NavLink className="menu-item" to="/vill-du-veta-mer">Hitta hit</NavLink>
+            <MUI.Link className="menu-item" to="/projektet-naturkraft">Projektet Naturkraft</MUI.Link>
+            <MUI.Link className="menu-item" to="/samarbetspartners">Samarbetspartners</MUI.Link>
+            <MUI.Link className="menu-item" to="/vill-du-veta-mer">Vill du veta mer?</MUI.Link>
+            <MUI.Link className="menu-item" to="/vill-du-veta-mer">Hitta hit</MUI.Link>
           </div>
         </div>
       )}
     </>
   );
 }
-
-export default Header;
