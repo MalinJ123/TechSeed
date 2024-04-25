@@ -6,7 +6,7 @@ import { Root } from "./routes/Root.jsx";
 
 // Routes
 import Start from "./routes/Start.jsx";
-import Kontakt from "./routes/Kontakt.jsx";
+import Contact from "./routes/Kontakt.jsx";
 import Login from "./routes/Login.jsx";
 import Project from "./routes/Project.jsx";
 import Cooperation from "./routes/Cooperation.jsx";
@@ -25,7 +25,7 @@ export const Router = createHashRouter([
       },
       {
         path: "/kontakt",
-        element:<Kontakt/>,
+        element:<Contact/>,
       },
       {
         path: "/projektet-naturkraft",
