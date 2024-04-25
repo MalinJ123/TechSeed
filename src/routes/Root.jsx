@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import "../styles/root.css"
 
 import { Outlet, useLocation } from "react-router-dom";
@@ -23,7 +23,6 @@ export const Root = () => {
 
   return (
     <>
-    <div className="background-image-container">
       <Header/>
       <Outlet/>
       {showTextContainer && (
@@ -39,7 +38,6 @@ export const Root = () => {
           </div>
        )
       }
-      </div>
     </>
   );
 };
