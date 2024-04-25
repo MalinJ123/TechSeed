@@ -24,7 +24,7 @@ html, body, #root {
 }
 
 html, body {
-  background-image: url("../src/images/background.jpg");
+  background-image: url("../src/images/main/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
