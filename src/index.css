@@ -1,3 +1,15 @@
+/* Importing fonts */
+@import url('@fontsource/roboto/300.css');
+@import url('@fontsource/roboto/400.css');
+@import url('@fontsource/roboto/500.css');
+@import url('@fontsource/roboto/700.css');
+@import url('@fontsource/jura/300.css');
+@import url('@fontsource/jura/400.css');
+@import url('@fontsource/jura/500.css');
+@import url('@fontsource/jura/700.css');
+
+
+/* Main */
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -5,24 +17,22 @@
 }
 
 html, body, #root {
-  height: 100dvh;
+  min-height: 100dvh;
+  max-height: 100%;
   width: 100%;
+  font-family: 'Jura', sans-serif;
+}
+
+html, body {
+  background-image: url("../src/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 :root {
-  /* fonts */
-  --font-jura: "Jura", sans-serif;
-}
-
-
-/* Backgrund bild */
-
-.background-image-container {
-  width: 100%;
-  height: 100%;
-  background-image: url("../src//images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; 
+  /* Colors */
 }
 
 .white{
