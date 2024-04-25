@@ -1,3 +1,34 @@
-.project__container{
-background-color: black;
+
+
+.MuiGrid-root .MuiGrid-container .css-1tyhkiz-MuiGrid-root {
+  padding: 0;
+}
+.project__container-body {
+  width: 70%;
+}
+
+.project__container-link{
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .project__container.css-1oqqzyl-MuiContainer-root {
+    padding: 0;
+  }
+  .project__container-body {
+    width: 100%;
+    
+  }
+  .project__container-title.css-bgi9zr-MuiTypography-root {
+    font-size: 25px;
+}
+.project__container-bold-text.css-scthh0-MuiTypography-root{
+    font-size: 18px;
+    
+}
+.project__container-text.css-d3wcwz-MuiTypography-root{
+        border:2px solid green;
+        font-size: 16px;
+
+    }
 }
