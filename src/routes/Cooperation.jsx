@@ -9,13 +9,13 @@ import sweModuleLogo from '../images/cooperation/Swemodule.png';
 import karlstadsUniversitetLogo from '../images/cooperation/Karlstads_Universitet.png';
 import lundsUniversitetLogo from '../images/cooperation/Lunds_Universitet.png';
 import teknikiVastLogo from '../images/cooperation/TeknikiVast.png';
-import hillbergsIFLogo from '../images/cooperation/Hillringsberg_IF.png';
+import hillringsbergsIFLogo from '../images/cooperation/Hillringsberg_IF.png';
 import glavaGymnastikföreningLogo from '../images/cooperation/Glava_Gymnastikförening.png';
 import sCBurmanAbLogo from '../images/cooperation/SC_Burman_AB.png';
 
 export default function Cooperation() {
     return (
-        <MUI.Box component="section" display="flex" flexDirection="column" justifyContent="center" gap={12}>
+        <MUI.Box component="section" display="flex" flexDirection="column" justifyContent="center" gap={12} marginTop={4}>
             <MUI.Container fixed maxWidth="sm">
                     <MUI.Card sx={{ backgroundColor: 'rgba(255, 255, 255, 0.90)' }} elevation={2}>
                         <MUI.CardHeader title="Samarbetspartners" titleTypographyProps={{ textAlign: 'center' }} />
@@ -50,7 +50,7 @@ export default function Cooperation() {
                     <MUI.Box component="div" display="flex" flexDirection="column" alignContent="center" justifyContent="center" width="200px">
                         <MUI.Typography variant="body1" textAlign="center" component="p">Teknik o Gårdstjänster</MUI.Typography>
                     </MUI.Box> 
-                    <img className="cooperation__image" src={hillbergsIFLogo} alt="Hillbergs IF logotyp" />
+                    <img className="cooperation__image" src={hillringsbergsIFLogo} alt="Hillringsbergs IF logotyp" />
                     <img className="cooperation__image" src={glavaGymnastikföreningLogo} alt="Glava Gymnastikförening" />
                     <img className="cooperation__image" src={sCBurmanAbLogo} alt="SC Burman AB logotyp" />
                 </MUI.Stack>
