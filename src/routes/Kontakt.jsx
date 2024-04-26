@@ -1,77 +1,143 @@
 import * as MUI from "@mui/material/";
 
-
 function Contact() {
-    return (
+  return (
+    <MUI.Box
+      component="section"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      gap={12}
+      marginTop={4}
+    >
       <MUI.Container
         sx={{
           backgroundColor: "rgba(255, 255, 255, 0.90)",
-          py: 4, // Lägg till önskat padding för att justera utseendet
+          py: 4,
         }}
       >
-        {/* "Hitta hit" kort */}
-        <MUI.Card sx={{ marginBottom: 4 }}>
-          <MUI.CardHeader
-            title="Hitta hit"
-            titleTypographyProps={{ textAlign: "center" }}
-          />
-          <MUI.Typography variant="body1" component="p">
-            Har ni några frågor eller funderingar angående Projektet
-            “Naturkraft”? Tveka inte att höra av er till oss.
-          </MUI.Typography>
-        </MUI.Card>
-  
-        {/* Innehållet med korten och Google Maps */}
-        <MUI.Box
-          display="flex"
-          justifyContent="space-between"
-          alignItems="flex-start" // Justera vertikal placering av innehållet
+        <MUI.Typography variant="h4" align="center" gutterBottom>
+          Hitta hit
+        </MUI.Typography>
+        <MUI.Typography
+          sx={{
+      
+            fontSize: "1.5rem",
+            textAlign: "center",
+            padding: "10px",
+          }}
+          variant="body3"
+          component="p"
         >
+          Har ni några frågor eller funderingar angående Projektet Naturkraft?
+        </MUI.Typography>
+        <MUI.Typography
+          sx={{
+      
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+            textAlign: "center", 
+            padding: "10px",
+          }}
+          variant="body3"
+          component="p"
+        >
+          Tveka inte att höra av er till oss.
+        </MUI.Typography>
+
+        <MUI.Box display="flex" marginTop={4} alignItems="center">
           {/* Vänster sida med kort */}
           <MUI.Box
             display="flex"
             flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
             gap={2}
             flex="1"
-            sx={{ backgroundColor: "rgba(255, 255, 255)" }}
+            height="25em"
           >
-            <MUI.Card elevation={2}>
+            <MUI.Card
+              elevation={2}
+              sx={{
+                paddingLeft: "1em",
+                paddingBottom: "2em",
+                width: "90%",
+                borderRadius: "10px",
+                boxShadow: "0px 4px 3px rgba(128, 128, 128, 0.5)",
+              }}
+            >
               <MUI.CardHeader
                 title="Eljusspåret/ Hillringsbergs IF"
-                titleTypographyProps={{ textAlign: "center" }}
+                titleTypographyProps={{
+                  textAlign: "center",
+                  padding: 0,
+                  fontSize: "25px",
+                }}
               />
               <MUI.Typography variant="body1" component="p">
-                Bengt Danielsson Ordförande Hillringsbergs IF
+                Bengt Danielsson
+              </MUI.Typography>
+              <MUI.Typography variant="body3" component="p">
+                Ordförande Hillringsbergs IF
               </MUI.Typography>
               <MUI.Typography variant="body1" component="p">
-                <MUI.Typography variant="body1" component="p">
-                  bengt@delabglava.se 0703426345
-                </MUI.Typography>
+                bengt@delabglava.se
+              </MUI.Typography>
+              <MUI.Typography variant="body1" component="p">
+                0703426345
               </MUI.Typography>
             </MUI.Card>
-            <MUI.Card elevation={2}>
+            <MUI.Card
+              elevation={2}
+              sx={{
+                paddingLeft: "1em",
+                paddingBottom: "2em",
+                width: "90%",
+
+                borderRadius: "10px",
+                boxShadow: "0px 4px 3px rgba(128, 128, 128, 0.5)",
+              }}
+            >
               <MUI.CardHeader
                 title="Projektet Naturkraft"
-                titleTypographyProps={{ textAlign: "center" }}
+                titleTypographyProps={{ textAlign: "center", fontSize: "25px" }}
               />
               <MUI.Typography variant="body1" component="p">
                 Isac Myrén Andersson
-                <MUI.Typography variant="body1" component="p">
-                  Glava Energy Center
-                </MUI.Typography>
+              </MUI.Typography>
+              <MUI.Typography variant="body3" component="p">
+                Glava Energy Center
+              </MUI.Typography>
+              <MUI.Typography variant="body1" component="p">
                 Isac.Myren.Andersson@GlavaEnergyCenter.se
               </MUI.Typography>
             </MUI.Card>
           </MUI.Box>
-  
+
           {/* Höger sida med Google Maps */}
-          <MUI.Box flex="1" sx={{ backgroundColor: "rgba(255, 255, 255)" }}>
+          <MUI.Box
+            flex="1"
+            sx={{
+              backgroundColor: "white",
+              borderRadius: "10px",
+              boxShadow: "0px 4px 3px rgba(128, 128, 128, 0.5)",
+            }}
+          >
             <MUI.Container fixed maxWidth="sm">
-              {/* Din kod för Google Maps-komponenten */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8093.380804462477!2d12.607034483359932!3d59.52734047717524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46436c4780203bcf%3A0x391fe2ed2c2d864e!2s671%2097%20Hillringsberg!5e0!3m2!1ssv!2sse!4v1714116722209!5m2!1ssv!2sse"
+                width="100%"
+                height="365"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </MUI.Container>
           </MUI.Box>
         </MUI.Box>
       </MUI.Container>
-    );
-  }
+    </MUI.Box>
+  );
+}
 export default Contact;

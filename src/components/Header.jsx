@@ -1,7 +1,7 @@
 import * as MUI from '@mui/material/';
 import * as MUIIcons from '@mui/icons-material';
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
 
 import "../styles/header.css";
 import hillringsberg from "../images/main/logotype.png";
@@ -68,9 +68,9 @@ export default function Header() {
               <MUI.MenuItem disableRipple onClick={() => navigate("/vill-du-veta-mer")}>Vill du veta mer?</MUI.MenuItem>
             </MUI.Menu>
 
-          <MUI.Link to="/kontakt" className="header__container--navbar">
-            Hitta hit
-          </MUI.Link>
+            <Link to="/kontakt" className="header__container--navbar">
+      Hitta hit
+    </Link>
 
           <MUI.Link
             to={isPersonIconOpen ? "/" : "/login"}
