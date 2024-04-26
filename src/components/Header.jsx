@@ -91,6 +91,9 @@ export default function Header() {
               open={headerDropdown}
               onClose={() => setHeaderDropdown(false)}
               anchorEl={dropdownAnchorEl}
+              sx={{
+                "& .MuiMenu-paper": { backgroundColor: "#111", color: "#fff" },
+              }}
             >
               <MUI.MenuItem
                 disableRipple
