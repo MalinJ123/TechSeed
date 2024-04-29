@@ -1,4 +1,4 @@
-
+/* 
 
 .MuiGrid-root .MuiGrid-container .css-1tyhkiz-MuiGrid-root {
   padding: 0;
@@ -31,4 +31,14 @@
         font-size: 16px;
 
     }
+} */
+
+.card {
+  padding: 30px !important;
+  /* width: 40% !important; 
+  height: 80%;  */
+  }
+
+.text-card .span {
+  font-size: 32px;
 }
