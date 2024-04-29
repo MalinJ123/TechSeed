@@ -13,12 +13,12 @@ function Project() {
             backgroundColor: "rgba(255, 255, 255, 0.95)",
           }}
         >
-          <MUI.CardHeader className="text-card" title="Eljusspåret i Glava" 
-          titleTypographyProps={{ textAlign: 'center', fontSize: 36, marginBottom: 5}} subheader="Glava elljusspår har något så speciellt som ett smart, behovsdrivet
+          <MUI.CardHeader className="text-card" title="Elljusspåret i Glava" 
+          titleTypographyProps={{ textAlign: 'center', fontSize: {sm: 30, md: 36}, marginBottom: 5}} subheader="Glava elljusspår har något så speciellt som ett smart, behovsdrivet
               och modulärt energisystem baserat i solenergi. Kombinationen av
               solenergi, behovsstyrd energieffektiv belysning och lagring via
               nätet möjliggör en miljövänlig energiförsörjning. Samtidigt är
-              utomhusmiljön både trygg och trivsam." subheaderTypographyProps={{fontWeight: 'bolder', fontSize: 24}} />
+              utomhusmiljön både trygg och trivsam." subheaderTypographyProps={{fontWeight: 'bolder', fontSize: {sm: 18, md: 24}}} />
           <MUI.CardContent>
             <MUI.Typography
             variant="body2" component="p" gutterBottom fontSize={20} lineHeight={2}>
