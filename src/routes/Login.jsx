@@ -97,9 +97,13 @@ export default function Login() {
                       id="username__input"
                       placeholder="Joe Doe"
                       maxLength={24}
-                      autoComplete="current-username"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
+                      sx={{
+                        borderBottom: "1px solid #FFF",
+                        backgroundColor: "rgba(255, 255, 255, 0.09)",
+                        color: "#FFF",
+                      }}
                     />
                     {usernameError && (
                       <MUI.FormHelperText
@@ -122,7 +126,6 @@ export default function Login() {
                       className="label"
                       type="password"
                       id="password__input"
-                      autoComplete="current-password"
                       placeholder="****"
                       maxLength={32}
                       value={userPassword}
