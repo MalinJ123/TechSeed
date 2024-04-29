@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import * as MUI from "@mui/material/";
 import { useNavigate } from "react-router-dom";
 
@@ -102,13 +102,16 @@ export default function Login() {
                       sx={{
                         borderBottom: "1px solid #FFF",
                         backgroundColor: "rgba(255, 255, 255, 0.09)",
-                        color: "#FFF",
+                        "*": {
+                          color: "#FFF",
+                        },
                       }}
                     />
                     {usernameError && (
                       <MUI.FormHelperText
                         variant="body2"
                         component="span"
+                        color="error"
                         sx={{ color: "#FF0000" }}
                       >
                         {usernameError}
@@ -116,31 +119,45 @@ export default function Login() {
                     )}
                   </MUI.Box>
 
-                  <div
+                  <MUI.Box
+                    component="div"
+                    display="flex"
+                    flexDirection="column"
                     className={`login__container--form ${
                       passwordError ? "error" : ""
                     }`}
                   >
-                    <label htmlFor="password__input">Lösenord</label>
-                    <input
-                      className="label"
-                      type="password"
-                      id="password__input"
+                    <MUI.TextField
+                      error={passwordError ? true : false}
+                      label="Lösenord*"
+                      variant="filled"
                       placeholder="****"
                       maxLength={32}
                       value={userPassword}
                       onChange={(e) => setUserPassword(e.target.value)}
+                      sx={{
+                        borderBottom: "1px solid #FFF",
+                        backgroundColor: "rgba(255, 255, 255, 0.09)",
+                        "*": {
+                          color: "#FFF",
+                        },
+                      }}
                     />
                     {passwordError && (
-                      <span className="error-message">{passwordError}</span>
+                      <MUI.FormHelperText
+                        variant="body2"
+                        component="span"
+                        color="error"
+                        sx={{ color: "#FF0000" }}
+                      >
+                        {passwordError}
+                      </MUI.FormHelperText>
                     )}
-                  </div>
+                  </MUI.Box>
 
-                  <div className="login__container--btn">
-                    <button type="submit" className="primary__button">
-                      Logga in
-                    </button>
-                  </div>
+                  <MUI.Button type="submit" role="button" variant="contained">
+                    Logga in
+                  </MUI.Button>
                 </MUI.FormControl>
               </MUI.Box>
             </form>
