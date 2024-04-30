@@ -10,15 +10,15 @@ function Project() {
         <MUI.Card elevation={2} 
           sx={{
             backgroundColor: "rgba(255, 255, 255, 0.95)",
-            padding: 2, 
+            padding: 1, 
           }}
         >
-          <MUI.CardHeader className="text-card" title="Elljusspåret i Glava"
+          <MUI.CardHeader title="Elljusspåret i Glava"
           titleTypographyProps={{ textAlign: 'center', fontSize: {xs: 32, md: 36}, marginBottom: 3, marginTop: 2}} subheader="Glava elljusspår har något så speciellt som ett smart, behovsdrivet
               och modulärt energisystem baserat i solenergi. Kombinationen av
               solenergi, behovsstyrd energieffektiv belysning och lagring via
               nätet möjliggör en miljövänlig energiförsörjning. Samtidigt är
-              utomhusmiljön både trygg och trivsam." subheaderTypographyProps={{fontWeight: 'bolder', fontSize: {xs: 18, md: 26}, paddingX: {xs: 2, md: 3}}} />
+              utomhusmiljön både trygg och trivsam." subheaderTypographyProps={{fontWeight: 'bolder', fontSize: {xs: 18, md: 24}, paddingX: {xs: 2, md: 3}}} />
           <MUI.CardContent>
             <MUI.Typography
             variant="body2" component="p" gutterBottom lineHeight={2}
@@ -28,8 +28,8 @@ function Project() {
                 md: 3,
               },
               fontSize: {
-                xs: 18, 
-                md: 22,
+                xs: 18,  
+                md: 20,
               }
             }}>
               Anläggningen med solpark, batteri och LED-belysning finns
@@ -41,15 +41,19 @@ function Project() {
               Glava Gymnastikförening.
             </MUI.Typography>
           </MUI.CardContent>
-          <MUI.CardActions sx={{marginLeft: 3}}>
+          <MUI.CardActions sx={{marginLeft: 4}}>
             <MUI.Link
               underline="hover"
               component="button"
               variant="body1"
               role="button"
               type="button"
-              fontSize={20}
-            >
+              sx={{
+                fontSize: {
+                  xs: 17, 
+                  md: 20,
+                }
+              }}>
               Läs mer om alla samarbetspartners
             </MUI.Link>
           </MUI.CardActions>
