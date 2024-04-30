@@ -1,5 +1,6 @@
 import { useState } from "react";
 import * as MUI from "@mui/material/";
+import * as MUIIcons from "@mui/icons-material/";
 import { useNavigate } from "react-router-dom";
 
 import "../styles/login.css";
@@ -10,13 +11,13 @@ export default function Login() {
   const [usernameError, setUsernameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
-  // useEffect(() => {
-  //   setChangeButtonsOnView("authentication");
+  const darkTheme = MUI.createTheme({
+    palette: {
+      mode: "dark",
+    },
+  });
 
-  //   if(isUserLoggedIn) {
-  //     navigate("/start");
-  //   }
-  // }, [isUserLoggedIn])
+  const userCredentialsFilled = username.length > 0 && userPassword.length > 0;
 
   const navigate = useNavigate();
 
@@ -58,112 +59,86 @@ export default function Login() {
   };
 
   return (
-    <MUI.Box
-      component="section"
-      display="flex"
-      flexDirection="column"
-      justifyContent="center"
-      gap={12}
-      marginTop={4}
-    >
-      <MUI.Container fixed maxWidth="sm">
-        <MUI.Card sx={{ backgroundColor: "rgba(0, 0, 0, 0.90)" }} elevation={2}>
-          <MUI.CardHeader
-            title="Logga in"
-            titleTypographyProps={{ textAlign: "center" }}
-          />
-          <MUI.CardContent>
-            <form onSubmit={onHandleSubmit}>
-              <MUI.Box
-                component="div"
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                gap={2}
-              >
-                <MUI.FormControl>
-                  <MUI.Box
-                    component="div"
-                    display="flex"
-                    flexDirection="column"
-                    className={`login__container--form ${
-                      usernameError ? "error" : ""
-                    }`}
-                  >
+    <MUI.ThemeProvider theme={darkTheme}>
+      <MUI.Box component="section" gap={12} marginTop={4}>
+        <MUI.Container fixed maxWidth="sm">
+          <MUI.Box component="div" display="flex" justifyContent="center">
+            <MUI.Card
+              sx={{ backgroundColor: "rgba(0, 0, 0, 0.90)" }}
+              elevation={2}
+            >
+              <MUI.CardHeader
+                title="Logga in"
+                titleTypographyProps={{ textAlign: "center" }}
+              />
+              <MUI.CardContent>
+                <MUI.Box
+                  acceptCharset="UTF-8"
+                  component="form"
+                  role="form"
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                  gap={2}
+                  spacing={4}
+                  onSubmit={onHandleSubmit}
+                >
+                  <MUI.FormControl>
                     <MUI.TextField
                       error={usernameError ? true : false}
+                      color={username.length > 0 ? "success" : undefined}
+                      type="text"
                       label="Användarnamn*"
+                      helperText={usernameError ? usernameError : ""}
                       variant="filled"
                       id="username__input"
                       placeholder="Joe Doe"
                       maxLength={24}
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
-                      sx={{
-                        borderBottom: "1px solid #FFF",
-                        backgroundColor: "rgba(255, 255, 255, 0.09)",
-                        "*": {
-                          color: "#FFF",
-                        },
-                      }}
                     />
-                    {usernameError && (
-                      <MUI.FormHelperText
-                        variant="body2"
-                        component="span"
-                        color="error"
-                        sx={{ color: "#FF0000" }}
-                      >
-                        {usernameError}
-                      </MUI.FormHelperText>
-                    )}
-                  </MUI.Box>
-
-                  <MUI.Box
-                    component="div"
-                    display="flex"
-                    flexDirection="column"
-                    className={`login__container--form ${
-                      passwordError ? "error" : ""
-                    }`}
-                  >
+                  </MUI.FormControl>
+                  <MUI.FormControl>
                     <MUI.TextField
                       error={passwordError ? true : false}
+                      color={userPassword.length > 0 ? "success" : undefined}
+                      type="password"
                       label="Lösenord*"
+                      helperText={passwordError ? passwordError : ""}
                       variant="filled"
                       placeholder="****"
                       maxLength={32}
                       value={userPassword}
                       onChange={(e) => setUserPassword(e.target.value)}
-                      sx={{
-                        borderBottom: "1px solid #FFF",
-                        backgroundColor: "rgba(255, 255, 255, 0.09)",
-                        "*": {
-                          color: "#FFF",
-                        },
-                      }}
                     />
-                    {passwordError && (
-                      <MUI.FormHelperText
-                        variant="body2"
-                        component="span"
-                        color="error"
-                        sx={{ color: "#FF0000" }}
-                      >
-                        {passwordError}
-                      </MUI.FormHelperText>
-                    )}
-                  </MUI.Box>
-
-                  <MUI.Button type="submit" role="button" variant="contained">
+                  </MUI.FormControl>
+                  <MUI.Button
+                    startIcon={
+                      userCredentialsFilled ? (
+                        <MUIIcons.Login>login</MUIIcons.Login>
+                      ) : usernameError || passwordError ? (
+                        <MUIIcons.Error>error</MUIIcons.Error>
+                      ) : null
+                    }
+                    type="submit"
+                    role="button"
+                    variant="contained"
+                    color={
+                      userCredentialsFilled
+                        ? "success"
+                        : usernameError || passwordError
+                        ? "error"
+                        : "info"
+                    }
+                  >
                     Logga in
                   </MUI.Button>
-                </MUI.FormControl>
-              </MUI.Box>
-            </form>
-          </MUI.CardContent>
-        </MUI.Card>
-      </MUI.Container>
-    </MUI.Box>
+                </MUI.Box>
+              </MUI.CardContent>
+            </MUI.Card>
+          </MUI.Box>
+        </MUI.Container>
+      </MUI.Box>
+    </MUI.ThemeProvider>
   );
 }
