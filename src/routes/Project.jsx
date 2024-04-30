@@ -3,7 +3,7 @@ import "../styles/project.css";
 
 function Project() {
   return (
-    <MUI.Container sx={{ marginTop: 10, padding: {xs: 0} }}>
+    <MUI.Container sx={{ marginTop: 10, padding: {xs: 2} }}>
       <MUI.Box 
         display="flex" 
         flexDirection="column" alignItems="center">

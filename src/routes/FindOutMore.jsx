@@ -10,18 +10,24 @@ function FindOutMore() {
         flexDirection="column"
         justifyContent="center"
         gap={12}
-        marginTop={4}
+        marginTop={10}
+        sx={{
+          padding: {
+            xs: 1,
+            md: 1,
+          }
+        }}
       >
-        <MUI.Container fixed maxWidth="sm">
+        <MUI.Container>
           <MUI.Card
             sx={{ backgroundColor: "rgba(255, 255, 255, 0.90)" }}
             elevation={2}
           >
             <MUI.CardHeader
               title="Vill du veta mer"
-              titleTypographyProps={{ textAlign: "center" }}
+              titleTypographyProps={{ textAlign: "center",fontSize: {xs: 32, md: 36}, marginBottom: 1, marginTop: 3, padding: 1}}    
             />
-            <MUI.CardContent>
+            <MUI.CardContent >
               <MUI.Box
                 component="div"
                 display="flex"
@@ -29,13 +35,23 @@ function FindOutMore() {
                 flexDirection="column"
                 alignItems="center"
                 gap={2}
+                margin={2}
               >
                 <MUI.Stack spacing={4} direction="column">
                   <MUI.Typography
                     variant="body1"
                     component="p"
-                    style={{ fontWeight: "bold" }}
-                  >
+                    style={{ fontWeight: "bolder" }}
+                    sx={{
+                      paddingX: {
+                        xs: 2, 
+                        md: 3,
+                      },
+                      fontSize: {
+                        xs: 18,  
+                        md: 28,
+                      }
+                    }}>
                     Glava elljusspår visar att idrottsföreningar och kommuner
                     kan få bra belysning på sina anläggningar, samtidigt som de
                     kan spara energi och få intäkter från överskottsenergi som
@@ -43,23 +59,53 @@ function FindOutMore() {
                     intresserad av att veta mer? Ta del av projektets resultat
                     och guide!
                   </MUI.Typography>
-                  <MUI.Typography variant="body1" component="p">
-                    Sverige har cirka 1 700 elljusspår som är belysta. De flesta
+                  <MUI.Typography variant="body1" component="p"
+                  sx={{
+                      paddingX: {
+                        xs: 2, 
+                        md: 3, 
+                      },
+                      fontSize: {
+                        xs: 18,
+                        md: 20, 
+                      }
+                  }}>
+                    <b>Sverige har cirka 1 700 elljusspår</b> som är belysta. De flesta
                     är byggda på 1960–70-talen med energikrävande och
                     miljöfarliga kvicksilverlampor som ska avvecklas enligt
                     EU-direktiv. Många föreningar och kommuner står inför större
                     uppgraderingar med krav på miljö och elsäkerhet. Att åtgärda
                     detta fordrar stora investeringar.
                   </MUI.Typography>
-                  <MUI.Typography variant="body1" component="p">
-                    Målet med projektet Naturkraft var bland annat att sprida
+                  <MUI.Typography variant="body1" component="p"
+                      sx={{
+                        paddingX: {
+                          xs: 2, 
+                          md: 3, 
+                        },
+                        fontSize: {
+                          xs: 18,
+                          md: 20, 
+                        }
+                    }}>
+                    <b>Målet med projektet Naturkraft</b> var bland annat att sprida
                     kunskap och ge förslag till samhället för framtidens
                     motionsanläggningar. Projektet visar att kombinationen av
                     solenergi, behovsstyrd energieffektiv belysning och lagring
                     via nätet kan ge en miljövänlig energiförsörjning och trygg
                     och trivsam utomhusmiljö på ett kostnadseffektivt sätt.
                   </MUI.Typography>
-                  <MUI.Typography variant="body1" component="p">
+                  <MUI.Typography variant="body1" component="p" style={{ fontWeight: "bold" }}
+                  sx={{
+                       paddingX: {
+                        xs: 2, 
+                        md: 3, 
+                      },
+                        fontSize: {
+                          xs: 18,
+                          md: 20, 
+                        }
+                    }}>
                     Projektet ska också resultera i en guide som kan användas av
                     andra kommuner och föreningar.
                   </MUI.Typography>
@@ -68,7 +114,16 @@ function FindOutMore() {
                     variant="body1"
                     component="p"
                     style={{ fontWeight: "bold" }}
-                  >
+                    sx={{
+                      paddingX: {
+                        xs: 2, 
+                        md: 3, 
+                      },
+                      fontSize: {
+                        xs: 20,
+                        md: 22, 
+                      }
+                  }}>
                     Vill du veta mer eller ta del av guiden? Mer information om
                     projektet och kontaktpersoner hittar du på Glava Energy
                     Centers webbplats:
@@ -78,7 +133,7 @@ function FindOutMore() {
             </MUI.CardContent>
             <MUI.CardActions
               className="bold"
-              sx={{ display: "flex", justifyContent: "flex-end" }}
+              sx={{ display: "flex", justifyContent: "flex-start", marginLeft: 6 }}
             >
               <MUI.Link
                 underline="hover"
@@ -86,6 +141,16 @@ function FindOutMore() {
                 variant="body1"
                 role="button"
                 type="button"
+                sx={{
+                  marginBottom: {
+                    xs: 2, 
+                    md: 3, 
+                  },
+                  fontSize: {
+                    xs: 17,
+                    md: 24,
+                  }
+                }}
               >
                 {" "}
                 https://glavaenergycenter.se/sv/
