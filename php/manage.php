@@ -9,14 +9,14 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-            const React = window.React;
+      const React = window.React;
       const ReactDOM = window.ReactDOM;
       const MUI = window.MaterialUI;
 
       const App = () => {
         return (
           <MUI.Container>
-            <Typography variant="h1">Hello World</Typography>
+            <MUI.Typography variant="h1">Du är nu inloggad! Grattis gubben!</MUI.Typography>
           </MUI.Container>
         );
       };
