@@ -1,13 +1,12 @@
 /* Importing fonts */
-@import url('@fontsource/roboto/300.css');
-@import url('@fontsource/roboto/400.css');
-@import url('@fontsource/roboto/500.css');
-@import url('@fontsource/roboto/700.css');
-@import url('@fontsource/jura/300.css');
-@import url('@fontsource/jura/400.css');
-@import url('@fontsource/jura/500.css');
-@import url('@fontsource/jura/700.css');
-
+@import url("@fontsource/roboto/300.css");
+@import url("@fontsource/roboto/400.css");
+@import url("@fontsource/roboto/500.css");
+@import url("@fontsource/roboto/700.css");
+@import url("@fontsource/jura/300.css");
+@import url("@fontsource/jura/400.css");
+@import url("@fontsource/jura/500.css");
+@import url("@fontsource/jura/700.css");
 
 /* Main */
 * {
@@ -16,26 +15,24 @@
   padding: 0px;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   min-height: 100dvh;
   max-height: 100%;
   width: 100%;
-  font-family: 'Jura', sans-serif;
-
+  font-family: "Jura", sans-serif;
 }
 
 /* Detta är MUI footern, för att den skall hamna längst ned på alla sidor.  */
-.css-hgropk-MuiContainer-root{
-  	position: absolute; 
-	bottom: 0;
-	width: 100%; 
- 
+.css-hgropk-MuiContainer-root {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
 }
 
- 
- 
-
-html, body {
+html,
+body {
   background-image: url("../src/images/main/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,6 +44,6 @@ html, body {
   /* Colors */
 }
 
-.white{
-  color:white;
+.white {
+  color: white;
 }
