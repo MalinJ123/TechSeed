@@ -21,7 +21,19 @@ html, body, #root {
   max-height: 100%;
   width: 100%;
   font-family: 'Jura', sans-serif;
+
 }
+
+/* Detta är MUI footern, för att den skall hamna längst ned på alla sidor.  */
+.css-hgropk-MuiContainer-root{
+  	position: absolute; 
+	bottom: 0;
+	width: 100%; 
+ 
+}
+
+ 
+ 
 
 html, body {
   background-image: url("../src/images/main/background.jpg");
