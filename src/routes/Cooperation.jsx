@@ -74,7 +74,7 @@ export default function Cooperation() {
                     </MUI.Card>
             </MUI.Container>
             <MUI.Box component="section" width="100%" sx={{ backgroundColor: 'rgba(255, 255, 255, 0.90)'}}>
-                <MUI.Stack sx={{ flexDirection: { xs: 'column', sm: 'column', md: 'row', lg: 'row', xl: 'row'}}} alignItems="center" justifyContent="center" spacing={4} gap={2} p={4}>
+                <MUI.Stack sx={{flexDirection: { xs: 'column', sm: 'column', md: 'row', lg: 'row', xl: 'row'}}} alignItems="center" justifyContent="center" spacing={4} gap={2} p={4}>
                     <img className="cooperation__image" src={glavaEnergyCenterLogo} alt="Glava Energy Center logotyp"  />
                     <img className="cooperation__image" src={energimyndighetenLogo} alt="Energimyndigheten logotyp" />
                     <img className="cooperation__image" src={sun4EnergyLogo} alt="Sun 4 Energy logotyp" />
