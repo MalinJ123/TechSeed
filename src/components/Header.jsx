@@ -29,8 +29,18 @@ export default function Header() {
       <MUI.Container
         maxWidth="xl"
         sx={{
-          paddingLeft: { xs: "0.75em", md: "1em", lg: "1.25em", xl: "1.5em" },
-          paddingRight: { xs: "0.75em", md: "1em", lg: "1.25em", xl: "1.5em" },
+          paddingLeft: {
+            xs: "1.15em",
+            md: "1.45em",
+            lg: "1.55em",
+            xl: "1.55em",
+          },
+          paddingRight: {
+            xs: "1.15em",
+            md: "1.45em",
+            lg: "1.55em",
+            xl: "1.55em",
+          },
         }}
       >
         <MUI.Toolbar
@@ -135,6 +145,18 @@ export default function Header() {
               }}
             >
               Hitta hit
+            </MUI.Button>
+            <MUI.Button
+              variant="outlined"
+              type="button"
+              onClick={() => navigate("/login")}
+              sx={{
+                backgroundColor: "transparent",
+                color: "#fff",
+                border: "1px solid transparent",
+              }}
+            >
+              <MUIIcons.Person />
             </MUI.Button>
           </MUI.Box>
           <MUI.Box
