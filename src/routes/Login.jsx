@@ -48,7 +48,7 @@ export default function Login() {
     ) {
       console.log("Inloggning lyckades!");
       console.log("Username and password are filled in!");
-      navigate("/start");
+      window.location.assign('../../php/manage.php')
     } else {
       console.log("Fel användarnamn eller lösenord");
       console.log("användarnamn", username);
