@@ -13,7 +13,7 @@ function Contact() {
       <MUI.Container
         sx={{
           backgroundColor: "rgba(255, 255, 255, 0.90)",
-          py: 4,
+          py: 6,
         }}
       >
         <MUI.Typography variant="h4" align="center" gutterBottom>
@@ -21,7 +21,6 @@ function Contact() {
         </MUI.Typography>
         <MUI.Typography
           sx={{
-      
             fontSize: "1.5rem",
             textAlign: "center",
             padding: "10px",
@@ -74,18 +73,19 @@ function Contact() {
                   textAlign: "center",
                   padding: 0,
                   fontSize: "25px",
+                  fontWeight: "bold"
                 }}
               />
-              <MUI.Typography variant="body1" component="p">
+              <MUI.Typography variant="body1" component="p" fontWeight="bold">
                 Bengt Danielsson
               </MUI.Typography>
-              <MUI.Typography variant="body3" component="p">
+              <MUI.Typography variant="body3" component="p" fontWeight="bold">
                 Ordförande Hillringsbergs IF
               </MUI.Typography>
-              <MUI.Typography variant="body1" component="p">
+              <MUI.Typography variant="body1" component="p" fontWeight="bold">
                 bengt@delabglava.se
               </MUI.Typography>
-              <MUI.Typography variant="body1" component="p">
+              <MUI.Typography variant="body1" component="p"fontWeight="bold">
                 0703426345
               </MUI.Typography>
             </MUI.Card>
@@ -101,15 +101,15 @@ function Contact() {
             >
               <MUI.CardHeader
                 title="Projektet Naturkraft"
-                titleTypographyProps={{ textAlign: "center", fontSize: "25px" }}
+                titleTypographyProps={{ textAlign: "center", fontSize: "25px", fontWeight: "bold" }}
               />
-              <MUI.Typography variant="body1" component="p">
+              <MUI.Typography variant="body1" component="p" fontWeight="bold">
                 Isac Myrén Andersson
               </MUI.Typography>
-              <MUI.Typography variant="body3" component="p">
+              <MUI.Typography variant="body3" component="p" fontWeight="bold">
                 Glava Energy Center
               </MUI.Typography>
-              <MUI.Typography variant="body1" component="p">
+              <MUI.Typography variant="body1" component="p" fontWeight="bold">
                 Isac.Myren.Andersson@GlavaEnergyCenter.se
               </MUI.Typography>
             </MUI.Card>

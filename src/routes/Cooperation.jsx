@@ -26,6 +26,7 @@ export default function Cooperation() {
                                     sx={{
                                         paddingX: {xs: 1, md: 6},
                                         fontSize: {xs: 18,md: 20},
+                                        color: "black",
                                     }}>
                                         <b>Syftet med projektet var att utveckla</b> och testa ett modulärt, säkert, smart och lokalt energisystem som möjliggör att idrottsföreningar och kommuner får bra belysning på sina anläggningar, samtidigt som de kan spara energi och få intäkter från överskottsenergi som produceras under den ljusa delen av året. 
                                     </MUI.Typography>
@@ -42,7 +43,8 @@ export default function Cooperation() {
                         </MUI.CardContent>
                             <MUI.CardActions sx={{display: 'flex', justifyContent:'flex-end', marginRight: 6}} >
                                 <MUI.Link 
-                                underline="hover" 
+                                className="link-hover"
+                                underline="none" 
                                 component="button" 
                                 variant="body1" 
                                 role="button" 
@@ -50,7 +52,9 @@ export default function Cooperation() {
                                 sx={{
                                     marginBottom: {xs: 2, md: 3},
                                     fontSize: {xs: 16, md: 22}, 
-                                    color: "black"
+                                    color: "black",
+                                    fontWeight: "bold",
+                                    padding: 2
                                 }}>
                                 Klicka här om du vill veta mer eller ta del av guiden
                                 </MUI.Link>

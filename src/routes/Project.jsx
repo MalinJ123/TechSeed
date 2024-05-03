@@ -37,7 +37,8 @@ function Project() {
           </MUI.CardContent>
           <MUI.CardActions sx={{display: "flex", justifyContent: "flex-end", marginRight: 6}}>
             <MUI.Link
-              underline="hover"
+              className="link-hover"
+              underline="none"
               component="button"
               variant="body1"
               role="button"
@@ -46,6 +47,8 @@ function Project() {
                 marginBottom: {xs: 2, md: 4},
                 fontSize: {xs: 16, md: 22},
                 color: "black",
+                fontWeight: "bold",
+                padding: 1, 
               }}>
               Läs mer om alla samarbetspartners
             </MUI.Link>

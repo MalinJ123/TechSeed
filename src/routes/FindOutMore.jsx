@@ -1,5 +1,5 @@
 import * as MUI from "@mui/material/";
-// import "../styles/findoutmore.css"
+import "../styles/findoutmore.css"
 
 function FindOutMore() {
   return (
@@ -19,8 +19,7 @@ function FindOutMore() {
           >
             <MUI.CardHeader
               title="Vill du veta mer"
-              style={{ fontWeight: "bold" }}
-              titleTypographyProps={{ textAlign: "center",fontSize: {xs: 32, md: 36}, marginTop: 5}}    
+              titleTypographyProps={{ textAlign: "center",fontSize: {xs: 32, md: 36}, marginTop: 5, fontWeight: "bold"}}    
             />
             <MUI.CardContent >
               <MUI.Box
@@ -104,7 +103,8 @@ function FindOutMore() {
               sx={{ display: "flex", justifyContent: "flex-end", marginRight: 10}}
             >
               <MUI.Link
-                underline="hover"
+                className="link-hover"
+                underline="none"
                 component="button"
                 variant="body1"
                 role="button"
@@ -112,7 +112,9 @@ function FindOutMore() {
                 sx={{
                   marginBottom: {xs: 2, md: 3}, 
                   fontSize: {xs: 16, md: 22},
-                  color: "black"
+                  color: "black",
+                  fontWeight: "bold",
+                  padding: 1
                 }}
               >
                 {" "}
