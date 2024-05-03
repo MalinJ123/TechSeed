@@ -124,8 +124,7 @@ function Contact() {
               boxShadow: "0px 4px 3px rgba(128, 128, 128, 0.5)",
               width: "90%", 
               maxWidth: {xs: "100%", sm: "90%"},
-              marginTop: "15px"
-            }}
+              marginTop: "15px"            }}
           >
             <MUI.Container fixed maxWidth="sm">
               <iframe
