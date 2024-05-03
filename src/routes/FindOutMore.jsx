@@ -19,6 +19,7 @@ function FindOutMore() {
           >
             <MUI.CardHeader
               title="Vill du veta mer"
+              style={{ fontWeight: "bold" }}
               titleTypographyProps={{ textAlign: "center",fontSize: {xs: 32, md: 36}, marginTop: 5}}    
             />
             <MUI.CardContent >
@@ -38,7 +39,8 @@ function FindOutMore() {
                     style={{ fontWeight: "bolder" }}
                     sx={{
                       paddingX: {xs: 0.5, md: 6},
-                      fontSize: {xs: 18, md: 24}
+                      fontSize: {xs: 18, md: 24},
+                      color: "black", 
                     }}>
                     Glava elljusspår visar att idrottsföreningar och kommuner
                     kan få bra belysning på sina anläggningar, samtidigt som de
@@ -50,7 +52,8 @@ function FindOutMore() {
                   <MUI.Typography variant="body1" component="p"
                   sx={{
                       paddingX: {xs: 0.5, md: 6},
-                      fontSize: {xs: 18, md: 20}
+                      fontSize: {xs: 18, md: 20},
+                      color: "black"
                   }}>
                     <b>Sverige har cirka 1 700 elljusspår</b> som är belysta. De flesta
                     är byggda på 1960–70-talen med energikrävande och
@@ -62,7 +65,8 @@ function FindOutMore() {
                   <MUI.Typography variant="body1" component="p"
                       sx={{
                         paddingX: {xs: 0.5, md: 6},
-                        fontSize: {xs: 18, md: 20}
+                        fontSize: {xs: 18, md: 20}, 
+                        color: "black"
                     }}>
                     <b>Målet med projektet Naturkraft</b> var bland annat att sprida
                     kunskap och ge förslag till samhället för framtidens
@@ -74,7 +78,8 @@ function FindOutMore() {
                   <MUI.Typography variant="body1" component="p" style={{ fontWeight: "bold" }}
                   sx={{
                        paddingX: {xs: 0.5, md: 6},
-                        fontSize: {xs: 18, md: 20}
+                        fontSize: {xs: 18, md: 20},
+                        color: "black"
                     }}>
                     Projektet ska också resultera i en guide som kan användas av
                     andra kommuner och föreningar.
@@ -96,7 +101,7 @@ function FindOutMore() {
               </MUI.Box>
             <MUI.CardActions
               className="bold"
-              sx={{ display: "flex", justifyContent: "flex-end", marginRight: 10 }}
+              sx={{ display: "flex", justifyContent: "flex-end", marginRight: 10}}
             >
               <MUI.Link
                 underline="hover"

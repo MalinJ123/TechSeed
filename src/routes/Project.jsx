@@ -9,11 +9,11 @@ function Project() {
         flexDirection="column" alignItems="center" gap={12}>
         <MUI.Card elevation={2} 
           sx={{
-            backgroundColor: "rgba(255, 255, 255, 0.95)",
+            backgroundColor: "rgba(255, 255, 255, 0.95)"
           }}
         >
           <MUI.CardHeader title="Elljusspåret i Glava"
-          titleTypographyProps={{ textAlign: 'center', fontSize: {xs: 32, md: 36}, marginBottom: 4, marginTop: 6, padding: 1}} subheader="Glava elljusspår har något så speciellt som ett smart, behovsdrivet
+          titleTypographyProps={{ fontWeight: 'bold', textAlign: 'center', fontSize: {xs: 32, md: 36}, marginBottom: 4, marginTop: 6, padding: 1}} subheader="Glava elljusspår har något så speciellt som ett smart, behovsdrivet
               och modulärt energisystem baserat i solenergi. Kombinationen av
               solenergi, behovsstyrd energieffektiv belysning och lagring via
               nätet möjliggör en miljövänlig energiförsörjning. Samtidigt är
@@ -24,6 +24,7 @@ function Project() {
             sx={{
               paddingX: {xs: 0.5, md: 6},
               fontSize: {xs: 18, md: 20},
+              color: "black"
             }}>
               Anläggningen med solpark, batteri och LED-belysning finns
               installerad vid motionsspåret i Glava, nära Glava kyrka. Systemet
