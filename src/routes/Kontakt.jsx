@@ -5,7 +5,7 @@ function Contact() {
     <MUI.Box
       component="section"
       display="flex"
-      flexDirection="column"
+      flexDirection={{xs: "column",md: "row"}}
       justifyContent="center"
       gap={12}
       marginTop={4}
@@ -45,7 +45,7 @@ function Contact() {
           Tveka inte att höra av er till oss.
         </MUI.Typography>
 
-        <MUI.Box display="flex" marginTop={4} alignItems="center">
+        <MUI.Box display="flex" marginTop={4} alignItems={{xs: "center", md: "flex-start"}} flexDirection={{xs: "column", md: "row"}}>
           {/* Vänster sida med kort */}
           <MUI.Box
             display="flex"
@@ -55,6 +55,8 @@ function Contact() {
             gap={2}
             flex="1"
             height="25em"
+            width={{ xs: "100%", md: "auto" }}
+            marginBottom={{ xs: 4, sm: 0 }}
           >
             <MUI.Card
               elevation={2}
