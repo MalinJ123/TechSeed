@@ -5,7 +5,7 @@ function Contact() {
     <MUI.Box
       component="section"
       display="flex"
-      flexDirection={{xs: "column",md: "row"}}
+      flexDirection={{xs: "column", md: "row"}}
       justifyContent="center"
       gap={12}
       marginTop={4}
@@ -56,7 +56,7 @@ function Contact() {
             flex="1"
             height="25em"
             width={{ xs: "100%", md: "auto" }}
-            marginBottom={{ xs: 4, sm: 0 }}
+            marginBottom={{ xs: 4, sm: 0, md: 0}}
           >
             <MUI.Card
               elevation={2}
@@ -69,7 +69,7 @@ function Contact() {
               }}
             >
               <MUI.CardHeader
-                title="Eljusspåret/ Hillringsbergs IF"
+                title="Elljusspåret/ Hillringsbergs IF"
                 titleTypographyProps={{
                   textAlign: "center",
                   padding: 0,
@@ -95,7 +95,6 @@ function Contact() {
                 paddingLeft: "1em",
                 paddingBottom: "2em",
                 width: "90%",
-
                 borderRadius: "10px",
                 boxShadow: "0px 4px 3px rgba(128, 128, 128, 0.5)",
               }}
@@ -123,6 +122,9 @@ function Contact() {
               backgroundColor: "white",
               borderRadius: "10px",
               boxShadow: "0px 4px 3px rgba(128, 128, 128, 0.5)",
+              width: "90%", 
+              maxWidth: {xs: "100%", sm: "90%"},
+              marginTop: "15px"
             }}
           >
             <MUI.Container fixed maxWidth="sm">
