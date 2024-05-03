@@ -15,43 +15,31 @@ import sCBurmanAbLogo from '../images/cooperation/SC_Burman_AB.png';
 
 export default function Cooperation() {
     return (
-        <MUI.Box component="section" display="flex" flexDirection="column" justifyContent="center" gap={12} marginTop={10}>
-            <MUI.Container>
-                    <MUI.Card sx={{ backgroundColor: 'rgba(255, 255, 255, 0.90)' }} elevation={2}>
-                        <MUI.CardHeader title="Samarbetspartners" titleTypographyProps={{ textAlign: 'center', fontSize: {xs: 32, md: 36}, marginBottom: 2, marginTop: 4}} />
+        <MUI.Box component="section" display="flex" flexDirection="column" justifyContent="center" gap={12} marginTop={8} >
+            <MUI.Container sx={{padding: {xs: 0}}}>
+                    <MUI.Card sx={{ backgroundColor: 'rgba(255, 255, 255, 0.90)' }} elevation={2} >
+                        <MUI.CardHeader title="Samarbetspartners" titleTypographyProps={{ textAlign: 'center', fontSize: {xs: 32, md: 36}, marginBottom: 3, marginTop: 4, padding: 1}} />
                         <MUI.CardContent>
-                            <MUI.Box component="div" display="flex" flexDirection="column" alignItems="center" gap={2}>
+                            <MUI.Box component="div" display="flex" flexDirection="column" alignItems="center" gap={2} >
                                 <MUI.Stack spacing={4} direction="column">
                                     <MUI.Typography variant="body1" component="p" lineHeight={1.8}
                                     sx={{
-                                        paddingX: {
-                                            xs: 4, 
-                                            md: 6,
-                                          },
-                                          fontSize: {
-                                            xs: 18,  
-                                            md: 20,
-                                          }
+                                        paddingX: {xs: 1, md: 6},
+                                        fontSize: {xs: 18,md: 20}
                                     }}>
-                                        Syftet med projektet var att utveckla och testa ett modulärt, säkert, smart och lokalt energisystem som möjliggör att idrottsföreningar och kommuner får bra belysning på sina anläggningar, samtidigt som de kan spara energi och få intäkter från överskottsenergi som produceras under den ljusa delen av året. 
+                                        <b>Syftet med projektet var att utveckla</b> och testa ett modulärt, säkert, smart och lokalt energisystem som möjliggör att idrottsföreningar och kommuner får bra belysning på sina anläggningar, samtidigt som de kan spara energi och få intäkter från överskottsenergi som produceras under den ljusa delen av året. 
                                     </MUI.Typography>
                                     <MUI.Typography variant="body1" component="p" lineHeight={1.8}
                                           sx={{
-                                            paddingX: {
-                                                xs: 4, 
-                                                md: 6,
-                                              },
-                                              fontSize: {
-                                                xs: 18,  
-                                                md: 20,
-                                              }
+                                            paddingX: {xs: 1, md: 6},
+                                            fontSize: {xs: 18, md: 20,}
                                         }}>
-                                        Målet var också att öka medvetenhet hos projektdeltagare och allmänhet om effektiv energianvändning och skapa mervärden genom att sprida kunskap och ge förslag till samhället för framtidens motionsanläggningar. Projektet ska också resultera i en guide som kan användas av andra kommuner och föreningar.
+                                        <b>Målet var också att öka medvetenhet</b> hos projektdeltagare och allmänhet om effektiv energianvändning och skapa mervärden genom att sprida kunskap och ge förslag till samhället för framtidens motionsanläggningar. Projektet ska också resultera i en guide som kan användas av andra kommuner och föreningar.
                                     </MUI.Typography>
                                 </MUI.Stack>
                             </MUI.Box>
                         </MUI.CardContent>
-                            <MUI.CardActions sx={{display: 'flex', justifyContent: 'flex-end'}} >
+                            <MUI.CardActions sx={{display: 'flex', justifyContent:'flex-end', marginRight: 6}} >
                                 <MUI.Link 
                                 underline="hover" 
                                 component="button" 
@@ -59,14 +47,9 @@ export default function Cooperation() {
                                 role="button" 
                                 type="button"
                                 sx={{
-                                    padding: {
-                                        xs: 3, 
-                                        md: 4, 
-                                    },
-                                    fontSize: {
-                                        xs: 15, 
-                                        md: 20,
-                                    }
+                                    marginBottom: {xs: 2, md: 3},
+                                    fontSize: {xs: 16, md: 22}, 
+                                    color: "black"
                                 }}>
                                 Klicka här om du vill veta mer eller ta del av guiden
                                 </MUI.Link>

@@ -3,34 +3,27 @@ import "../styles/project.css";
 
 function Project() {
   return (
-    <MUI.Container sx={{ marginTop: 10, padding: {xs: 2} }}>
+    <MUI.Container sx={{ marginTop: 8, padding: {xs: 0}}}>
       <MUI.Box 
         display="flex" 
-        flexDirection="column" alignItems="center">
+        flexDirection="column" alignItems="center" gap={12}>
         <MUI.Card elevation={2} 
           sx={{
             backgroundColor: "rgba(255, 255, 255, 0.95)",
-            padding: 1, 
           }}
         >
           <MUI.CardHeader title="Elljusspåret i Glava"
-          titleTypographyProps={{ textAlign: 'center', fontSize: {xs: 32, md: 36}, marginBottom: 3, marginTop: 2}} subheader="Glava elljusspår har något så speciellt som ett smart, behovsdrivet
+          titleTypographyProps={{ textAlign: 'center', fontSize: {xs: 32, md: 36}, marginBottom: 4, marginTop: 6, padding: 1}} subheader="Glava elljusspår har något så speciellt som ett smart, behovsdrivet
               och modulärt energisystem baserat i solenergi. Kombinationen av
               solenergi, behovsstyrd energieffektiv belysning och lagring via
               nätet möjliggör en miljövänlig energiförsörjning. Samtidigt är
-              utomhusmiljön både trygg och trivsam." subheaderTypographyProps={{fontWeight: 'bolder', fontSize: {xs: 18, md: 24}, paddingX: {xs: 2, md: 3}}} />
+              utomhusmiljön både trygg och trivsam." subheaderTypographyProps={{fontWeight: 'bolder', fontSize: {xs: 18, md: 24}, paddingX: {xs: 0.5, md: 6}}} />
           <MUI.CardContent>
             <MUI.Typography
             variant="body2" component="p" gutterBottom lineHeight={2}
             sx={{
-              paddingX: {
-                xs: 2, 
-                md: 3,
-              },
-              fontSize: {
-                xs: 18,  
-                md: 20,
-              }
+              paddingX: {xs: 0.5, md: 6},
+              fontSize: {xs: 18, md: 20},
             }}>
               Anläggningen med solpark, batteri och LED-belysning finns
               installerad vid motionsspåret i Glava, nära Glava kyrka. Systemet
@@ -41,7 +34,7 @@ function Project() {
               Glava Gymnastikförening.
             </MUI.Typography>
           </MUI.CardContent>
-          <MUI.CardActions sx={{marginLeft: 4}}>
+          <MUI.CardActions sx={{display: "flex", justifyContent: "flex-end", marginRight: 6}}>
             <MUI.Link
               underline="hover"
               component="button"
@@ -49,10 +42,9 @@ function Project() {
               role="button"
               type="button"
               sx={{
-                fontSize: {
-                  xs: 17, 
-                  md: 20,
-                }
+                marginBottom: {xs: 2, md: 4},
+                fontSize: {xs: 16, md: 22},
+                color: "black",
               }}>
               Läs mer om alla samarbetspartners
             </MUI.Link>
