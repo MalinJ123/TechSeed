@@ -60,19 +60,20 @@ export default function Login() {
 
   return (
     <MUI.ThemeProvider theme={darkTheme}>
-      <MUI.Box component="section" gap={12} marginTop={4}>
-        <MUI.Container fixed maxWidth="sm">
-          <MUI.Box component="div" display="flex" justifyContent="center">
+      <MUI.Box component="section" gap={12} marginTop={20}>
+        <MUI.Container fixed maxWidth="md">
+          <MUI.Box component="div" display="flex" justifyContent="center" className="login__container">
             <MUI.Card
-              sx={{ backgroundColor: "rgba(0, 0, 0, 0.90)" }}
+              sx={{ backgroundColor: "rgba(0, 0, 0, 0.90)" , opacity: "89", borderRadius: 15, padding: 4, border: "1px solid black", width: "45%"}}
               elevation={2}
             >
               <MUI.CardHeader
                 title="Logga in"
-                titleTypographyProps={{ textAlign: "center" }}
+                titleTypographyProps={{ textAlign: "center", marginTop: "0.5rem" }}
               />
               <MUI.CardContent>
                 <MUI.Box
+                  className="login__container--form"
                   acceptCharset="UTF-8"
                   component="form"
                   role="form"
@@ -96,6 +97,7 @@ export default function Login() {
                       maxLength={24}
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
+                      sx={{margin: 2}}
                     />
                   </MUI.FormControl>
                   <MUI.FormControl>
@@ -110,9 +112,11 @@ export default function Login() {
                       maxLength={32}
                       value={userPassword}
                       onChange={(e) => setUserPassword(e.target.value)}
+                      sx={{ width: "100%", maxWidth: "600px"}}
                     />
                   </MUI.FormControl>
                   <MUI.Button
+                    className="primary__button"
                     startIcon={
                       userCredentialsFilled ? (
                         <MUIIcons.Login>login</MUIIcons.Login>
@@ -130,6 +134,12 @@ export default function Login() {
                         ? "error"
                         : "info"
                     }
+                    sx={{
+                      marginY: "2rem",
+                      fontSize: "1.2rem",
+                      minWidth: "150px",
+                      borderRadius: "10px"
+                    }}
                   >
                     Logga in
                   </MUI.Button>
