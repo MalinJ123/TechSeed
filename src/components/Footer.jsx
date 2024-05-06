@@ -18,7 +18,7 @@ function Footer() {
         //   border:"1px solid hotpink"
         }}
       >
-        <div style={{ flex: 1, padding: "8px",    alignContent:"center"}}>
+        <div style={{ flex: 1, padding: "8px",    alignContent:"center" }}>
           <MUI.Typography variant="body1" fontSize="18px">
             Hillringsberg 671 97 Glava
           </MUI.Typography>
@@ -66,6 +66,21 @@ function Footer() {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        @media (max-width: 850px) {
+          div {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 25px; 
+          }
+        }
+        @media (max-width: 475px) {
+          div {
+            gap: 15px; 
+          }
+        }
+      `}</style>
     </MUI.Container>
   );
 }
