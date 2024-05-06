@@ -9,10 +9,11 @@ function Contact() {
       justifyContent="center"
       gap={12}
       marginTop={4}
-    >
+      >
       <MUI.Container
         sx={{
           backgroundColor: "rgba(255, 255, 255, 0.90)",
+          paddingTop: 0,
           py: 6,
           borderRadius: "10px", 
           overflow: "hidden",
@@ -56,7 +57,7 @@ function Contact() {
             gap={2}
             flex="1"
             height="25em"
-            width={{ xs: "100%", md: "auto" }}
+            width={{ xs: "120%", md: "100%" }}
             marginBottom={{ xs: 4, sm: 0, md: 4}}
           >
             <MUI.Card
@@ -124,10 +125,10 @@ function Contact() {
               backgroundColor: "white",
               borderRadius: "10px",
               boxShadow: "0px 4px 3px rgba(128, 128, 128, 0.5)",
-              width: "100%", 
-              maxWidth: {xs: "90%"},
-              marginY: "15px",
-              marginRight: {xs: 0, md: "20px"}
+              width: "110%", 
+              // maxWidth: "100%",
+              marginY: "10px",
+              marginRight: {xs: 0, md: "20px"},
             }}
           >
             <MUI.Container fixed maxWidth="sm">
