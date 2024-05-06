@@ -52,7 +52,8 @@ function FindOutMore() {
                   sx={{
                       paddingX: {xs: 0.5, md: 6},
                       fontSize: {xs: 18, md: 20},
-                      color: "black"
+                      color: "black",
+                      fontWeight: 500, 
                   }}>
                     <b>Sverige har cirka 1 700 elljusspår</b> som är belysta. De flesta
                     är byggda på 1960–70-talen med energikrävande och
@@ -65,7 +66,8 @@ function FindOutMore() {
                       sx={{
                         paddingX: {xs: 0.5, md: 6},
                         fontSize: {xs: 18, md: 20}, 
-                        color: "black"
+                        color: "black",
+                        fontWeight: 500, 
                     }}>
                     <b>Målet med projektet Naturkraft</b> var bland annat att sprida
                     kunskap och ge förslag till samhället för framtidens
@@ -111,7 +113,7 @@ function FindOutMore() {
                 type="button"
                 sx={{
                   marginBottom: {xs: 2, md: 3}, 
-                  fontSize: {xs: 16, md: 22},
+                  fontSize: {xs: 16, md: 20},
                   color: "black",
                   fontWeight: "bold",
                   padding: 1
