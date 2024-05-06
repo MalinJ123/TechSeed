@@ -13,7 +13,7 @@ function Contact() {
       <MUI.Container
         sx={{
           backgroundColor: "rgba(255, 255, 255, 0.90)",
-          py: 6,
+          py: 10,
         }}
       >
         <MUI.Typography variant="h4" align="center" gutterBottom>
@@ -122,7 +122,7 @@ function Contact() {
               backgroundColor: "white",
               borderRadius: "10px",
               boxShadow: "0px 4px 3px rgba(128, 128, 128, 0.5)",
-              width: "90%", 
+              width: "100%", 
               maxWidth: {xs: "100%", sm: "90%"},
               marginTop: "15px"
             }}
