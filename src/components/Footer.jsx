@@ -1,5 +1,7 @@
 import * as MUI from "@mui/material";
 import CompanyLogo from "../images/main/logotype.png";
+import "../styles/footer.css"
+
 function Footer() {
   return (
     <MUI.Container
@@ -18,14 +20,14 @@ function Footer() {
         //   border:"1px solid hotpink"
         }}
       >
-        <div style={{ flex: 1, padding: "8px",    alignContent:"center"}}>
-          <MUI.Typography variant="body1" fontSize="18px">
+        <div style={{ flex: 1, padding: "8px",    alignContent:"center" }}>
+          <MUI.Typography variant="body1" fontSize={{ xs: "16px", md:"18px"}}>
             Hillringsberg 671 97 Glava
           </MUI.Typography>
 
-          <MUI.Typography variant="body2" fontSize="16px">Bengt@delabglava.se</MUI.Typography>
+          <MUI.Typography variant="body2" fontSize={{ xs: "16px", md:"18px"}}>Bengt@delabglava.se</MUI.Typography>
 
-          <MUI.Typography variant="body3" fontSize="18px"> 070 - 34 26 345</MUI.Typography>
+          <MUI.Typography variant="body3" fontSize={{ xs: "16px", md:"18px"}}> 070 - 34 26 345</MUI.Typography>
         </div>
 
         <div
@@ -55,12 +57,12 @@ function Footer() {
         >
           <div style={{ textAlign: "center" }}>
             <MUI.Typography
-              variant="body2" fontSize="18px"
+              variant="body2" fontSize={{ xs: "16px", md:"18px"}}
               style={{ textAlign: "right", marginTop: "1em" }}
             >
               Isac.Myren.Andersson@GlavaEnergyCenter.se
             </MUI.Typography>
-            <MUI.Typography variant="body2" fontSize="18px" style={{ textAlign: "right" }}>
+            <MUI.Typography variant="body2" fontSize={{ xs: "16px", md:"18px"}} style={{ textAlign: "right" }}>
               Scaaler IoT Labs, Strandvägen 2, 671 51 Arvika
             </MUI.Typography>
           </div>
