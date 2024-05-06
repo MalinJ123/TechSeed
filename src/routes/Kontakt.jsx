@@ -13,10 +13,12 @@ function Contact() {
       <MUI.Container
         sx={{
           backgroundColor: "rgba(255, 255, 255, 0.90)",
-          py: 10,
+          py: 6,
+          borderRadius: "10px", 
+          overflow: "hidden",
         }}
       >
-        <MUI.Typography variant="h4" align="center" gutterBottom>
+        <MUI.Typography variant="h4" align="center" gutterBottom fontWeight="bold">
           Hitta hit
         </MUI.Typography>
         <MUI.Typography
@@ -55,7 +57,7 @@ function Contact() {
             flex="1"
             height="25em"
             width={{ xs: "100%", md: "auto" }}
-            marginBottom={{ xs: 4, sm: 0, md: 0}}
+            marginBottom={{ xs: 4, sm: 0, md: 4}}
           >
             <MUI.Card
               elevation={2}
@@ -123,8 +125,9 @@ function Contact() {
               borderRadius: "10px",
               boxShadow: "0px 4px 3px rgba(128, 128, 128, 0.5)",
               width: "100%", 
-              maxWidth: {xs: "100%", sm: "90%"},
-              marginTop: "15px"
+              maxWidth: {xs: "90%"},
+              marginY: "15px",
+              marginRight: {xs: 0, md: "20px"}
             }}
           >
             <MUI.Container fixed maxWidth="sm">

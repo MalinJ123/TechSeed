@@ -17,16 +17,17 @@ function Project() {
               och modulärt energisystem baserat i solenergi. Kombinationen av
               solenergi, behovsstyrd energieffektiv belysning och lagring via
               nätet möjliggör en miljövänlig energiförsörjning. Samtidigt är
-              utomhusmiljön både trygg och trivsam." subheaderTypographyProps={{fontWeight: 'bolder', fontSize: {xs: 18, md: 24}, paddingX: {xs: 0.5, md: 6}}} />
+              utomhusmiljön både trygg och trivsam." subheaderTypographyProps={{ color:"black", fontWeight: 900, fontSize: {xs: 18, md: 24}, paddingX: {xs: 0.5, md: 6}}} />
           <MUI.CardContent>
             <MUI.Typography
             variant="body2" component="p" gutterBottom lineHeight={2}
             sx={{
               paddingX: {xs: 0.5, md: 6},
               fontSize: {xs: 18, md: 20},
-              color: "black"
+              color: "black",
+              fontWeight: 500, 
             }}>
-              Anläggningen med solpark, batteri och LED-belysning finns
+              <b>Anläggningen med solpark, batteri och LED-belysning</b> finns
               installerad vid motionsspåret i Glava, nära Glava kyrka. Systemet
               togs fram åren 2018–2024 i projektet Naturkraft – Må gott på
               mötesplatser ute i naturen, som finansierades av Energimyndigheten.
@@ -45,7 +46,7 @@ function Project() {
               type="button"
               sx={{
                 marginBottom: {xs: 2, md: 4},
-                fontSize: {xs: 16, md: 22},
+                fontSize: {xs: 16, md: 20},
                 color: "black",
                 fontWeight: "bold",
                 padding: 1, 
