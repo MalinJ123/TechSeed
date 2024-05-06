@@ -25,10 +25,14 @@ body,
 }
 
 /* Detta är MUI footern, för att den skall hamna längst ned på alla sidor.  */
-.css-hgropk-MuiContainer-root {
+/* .css-hgropk-MuiContainer-root {
   position: absolute;
   bottom: 0;
   min-width: 100%;
+} */
+
+body {
+  overflow-x: hidden; 
 }
 
 html,
